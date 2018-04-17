@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html><head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script type="text/javascript" src="a_data/jquery-git.js"></script>
+
+
+
+
+
+
+
+
+    <link rel="stylesheet" type="text/css" href="a_data/result-light.css">
+
+
+
+
+      <script type="text/javascript" src="a_data/moment.js"></script>
+
+
+
+  <style type="text/css">
+
+
+.container {
+    position: relative;
+}
+
+.center {
+    position: absolute;
+    left: 0;
+    top: 9%;
+    width: 100%;
+    text-align: center;
+    font-size: 4vw;
+    color: white;
+    font-family: "Trebuchet MS", Helvetica, monospace;
+    opacity: 0.8;
+}
+
+.bottomcenter {
+    position: absolute;
+    left: 0;
+    top: 89%;
+    width: 100%;
+    text-align: center;
+    font-size: 12.5vw;
+    color: white;
+    font-family: "Trebuchet MS", Helvetica, "Lucida Grande", monospace;
+}
+
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+
+
+body {
+    background-image: url("https://i.imgur.com/aLUz9jq.png");
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
+
+
+
+
+
+
+  </style>
+
+  <title>SL BILJETT</title>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+$(window).on('load', function() {
+
+function startTimer(duration, display) {
+    var timer = duration, minutes, seconds;
+    setInterval(function () {
+        minutes = parseInt(timer / 60, 10);
+        seconds = parseInt(timer % 60, 10);
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.text(minutes + ":" + seconds);
+
+        if (--timer < 0) {
+            timer = duration;
+        }
+    }, 1000);
+}
+
+jQuery(function ($) {
+    var fiveMinutes = 60 * 75,
+        display = $('#time');
+    startTimer(fiveMinutes, display);
+});
+
+
+
+document.getElementById("para1").innerHTML = formatAMPM();
+
+function formatAMPM() {
+var d = new Date(),
+    minutes = d.getMinutes().toString().length == 1 ? '0'+d.getMinutes() : d.getMinutes(),
+    hours = d.getHours().toString().length == 1 ? '0'+d.getHours() : d.getHours(),
+    ampm = d.getHours() >= 12 ? 'pm' : 'am',
+    months = ['Januari','Februari','Mars','April','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
+    days = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+return d.getDate()+' '+months[d.getMonth()]+' '+d.getFullYear();
+}
+
+
+
+
+});
+
+
+
+
+</script>
+
+
+</head>
+
+<body>
+
+
+
+
+
+<div class="container">
+  <img src="a_data/905daGt.png" alt="Norway" width="1000" height="300">
+  <div class="center"><div id="para1">17 April 2018</div></div>
+  <div class="bottomcenter">  <div><span id="time">74:53</span></div> </div>
+
+</div>
+
+
+
+
+  <script>
+  // tell the embed parent frame the height of the content
+  if (window.parent && window.parent.parent){
+    window.parent.parent.postMessage(["resultsFrame", {
+      height: document.body.getBoundingClientRect().height,
+      slug: "4Lwxf3xq"
+    }], "*")
+  }
+</script>
+
+
+
+
+
+</body></html>
