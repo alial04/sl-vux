@@ -34,7 +34,6 @@
 
 
 
-    <link rel="stylesheet" type="text/css" href="a_data/result-light.css">
 
 
 
@@ -82,14 +81,20 @@ img {
 
 
 body {
-    background-image: url("https://i.imgur.com/aLUz9jq.png");
+    background-image: url("bakgrund.png");
     background-repeat: repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    animation:clouds_anim 350s linear infinite;
 }
 
+@keyframes clouds_anim{
+  0%{background-position: 0 0; }
+  100%{background-position: -30000px -30000px;}
+
+}
 
 
 
