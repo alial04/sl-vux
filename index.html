@@ -83,7 +83,7 @@ img {
 
 body {
     background-image: url("https://i.imgur.com/aLUz9jq.png");
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -102,16 +102,23 @@ body {
   <title>SL BILJETT</title>
 
 
+<script>
+// Find the right method, call on correct element
+function launchIntoFullscreen(element) {
+  if(element.requestFullscreen) {
+    element.requestFullscreen();
+  } else if(element.mozRequestFullScreen) {
+    element.mozRequestFullScreen();
+  } else if(element.webkitRequestFullscreen) {
+    element.webkitRequestFullscreen();
+  } else if(element.msRequestFullscreen) {
+    element.msRequestFullscreen();
+  }
+}
 
+// Launch fullscreen for browsers that support it!
 
-
-
-
-
-
-
-
-
+</script>
 
 
 
@@ -163,7 +170,6 @@ return d.getDate()+' '+months[d.getMonth()]+' '+d.getFullYear();
 
 
 
-
 </script>
 
 
@@ -173,12 +179,14 @@ return d.getDate()+' '+months[d.getMonth()]+' '+d.getFullYear();
 
 
 
-
-
 <div class="container">
-  <img src="a_data/905daGt.png" alt="Norway" width="1000" height="300">
-  <div class="center"><div id="para1">17 April 2018</div></div>
-  <div class="bottomcenter">  <div><span id="time">74:53</span></div> </div>
+
+
+  <img onclick="launchIntoFullscreen(document.documentElement)" src="a_data/905daGt.png" alt="Ticket" width="1000" height="300">
+
+
+  <div onclick="launchIntoFullscreen(document.documentElement)" class="center"><div id="para1">17 April 2018</div></div>
+  <div onclick="launchIntoFullscreen(document.documentElement)" class="bottomcenter">  <div><span id="time">74:53</span></div> </div>
 
 </div>
 
